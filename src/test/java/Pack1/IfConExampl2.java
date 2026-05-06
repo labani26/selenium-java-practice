@@ -16,7 +16,7 @@ public class IfConExampl2 {
 		driver.get("http://www.facebook.com");
 		//get() is used to launch a URL
 		driver.manage().window().maximize();
-		//Maximizes the browser window
+		//Maximizes the browser windowIfConExample2.java
 		
 		String actualtitle = driver.getTitle();
 		//Fetches the current page title
