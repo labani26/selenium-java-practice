@@ -1,4 +1,4 @@
-package Pack1;
+package TestNGpack;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
