@@ -1,27 +1,17 @@
 package TestNGpack;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.TestNG;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class DataProviderExampl2 {
-	
-	@DataProvider(name = "DataProvider")
-    public Object[][] dataprovidermethod() {
-
-        return new Object[][] {
-
-                {"Test12345", "Test@12345"},
-                {"Test123456", "Test@123456"},
-                {"Test12345", "Test@12345"}
-
-        };
-    }
 
     @Test(dataProvider = "DataProvider")
     public void loginTest(String username, String password) throws InterruptedException {
@@ -36,19 +26,47 @@ public class DataProviderExampl2 {
 
         driver.findElement(By.id("menuUser")).click();
 
-        Thread.sleep(3000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 
         driver.findElement(By.name("username")).sendKeys(username);
 
         driver.findElement(By.name("password")).sendKeys(password);
 
-        driver.findElement(By.id("sign_in_btn")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("sign_in_btn"))).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         String actualValue = driver.findElement(By.xpath("//*[@id=\"menuUserLink\"]/span")).getText();
 
-        System.out.println("Logged in User: " + actualValue);
+        if (actualValue.equals(username)) {
 
+            System.out.println("Test is Pass");
+        }
 
+        else {
+
+            System.out.println("Test is Fail");
+        }
+
+        driver.quit();
+    }
+
+    @DataProvider(name = "DataProvider")
+    public Object[][] dataprovidermethod() {
+
+        return new Object[][] {
+
+        	    
+                {"Test123456", "Test@123456"},
+                {"Test12345", "Test@12345"},
+
+        };
+    }
+    public static void main(String[] args) {
+        TestNG testng = new TestNG();
+        testng.setTestClasses(new Class[] { DataProviderExampl2.class });
+        testng.run();
+    }
 }
