@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[URL launched]]>
+    </line>
+    <line>
+      <![CDATA[Browser opened]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on menuUser]]>
+    </line>
+    <line>
+      <![CDATA[Entered username: Test123456]]>
+    </line>
+    <line>
+      <![CDATA[Entered password: Test@123456]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Sign In button]]>
+    </line>
+    <line>
+      <![CDATA[URL launched]]>
+    </line>
+    <line>
+      <![CDATA[Browser opened]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on menuUser]]>
+    </line>
+    <line>
+      <![CDATA[Entered username: Test12345]]>
+    </line>
+    <line>
+      <![CDATA[Entered password: Test@12345]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Sign In button]]>
+    </line>
   </reporter-output>
-  <suite started-at="2026-05-14T04:54:12 GMT-07:00" name="Command line suite" finished-at="2026-05-14T04:54:12 GMT-07:00" duration-ms="62">
+  <suite started-at="2026-05-15T03:41:01 GMT-07:00" name="Command line suite" finished-at="2026-05-15T03:41:59 GMT-07:00" duration-ms="57613">
     <groups>
     </groups>
-    <test started-at="2026-05-14T04:54:12 GMT-07:00" name="Command line test" finished-at="2026-05-14T04:54:12 GMT-07:00" duration-ms="62">
-      <class name="TestNGpack.AlwaysRunMethod">
-        <test-method signature="test2()[pri:0, instance:TestNGpack.AlwaysRunMethod@527740a2]" started-at="2026-05-14T04:54:12 GMT-07:00" name="test2" finished-at="2026-05-14T04:54:12 GMT-07:00" duration-ms="8" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2026-05-15T03:41:01 GMT-07:00" name="Command line test" finished-at="2026-05-15T03:41:59 GMT-07:00" duration-ms="57613">
+      <class name="TestNGpack.DataProviderExampl2">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:TestNGpack.DataProviderExampl2@2b9627bc]" started-at="2026-05-15T03:41:01 GMT-07:00" name="loginTest" data-provider="DataProvider" finished-at="2026-05-15T03:41:32 GMT-07:00" duration-ms="30951" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test123456]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@123456]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='menuUserLink']/span (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.98, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\LABANI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62567}, goog:processID: 23440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62567/devtoo..., se:cdpVersion: 148.0.7778.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee512a4ab4cc49453ff7abb6defef719]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at TestNGpack.AlwaysRunMethod.test2(AlwaysRunMethod.java:19)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='menuUserLink']/span (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.98, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\LABANI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62567}, goog:processID: 23440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62567/devtoo..., se:cdpVersion: 148.0.7778.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee512a4ab4cc49453ff7abb6defef719
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestNGpack.DataProviderExampl2.loginTest(DataProviderExampl2.java:66)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -42,18 +98,112 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at TestNGpack.AlwaysRunMethod.main(AlwaysRunMethod.java:29)
+at TestNGpack.DataProviderExampl2.main(DataProviderExampl2.java:110)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
+            <line>
+              <![CDATA[URL launched]]>
+            </line>
+            <line>
+              <![CDATA[Browser opened]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on menuUser]]>
+            </line>
+            <line>
+              <![CDATA[Entered username: Test123456]]>
+            </line>
+            <line>
+              <![CDATA[Entered password: Test@123456]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Sign In button]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method signature="test1()[pri:0, instance:TestNGpack.AlwaysRunMethod@527740a2]" started-at="2026-05-14T04:54:12 GMT-07:00" name="test1" finished-at="2026-05-14T04:54:12 GMT-07:00" depends-on-methods="TestNGpack.AlwaysRunMethod.test2" duration-ms="1" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:TestNGpack.DataProviderExampl2@2b9627bc]" started-at="2026-05-15T03:41:32 GMT-07:00" name="loginTest" data-provider="DataProvider" finished-at="2026-05-15T03:41:59 GMT-07:00" duration-ms="26580" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test12345]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@12345]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='menuUserLink']/span (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.98, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\LABANI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49817}, goog:processID: 16960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49817/devtoo..., se:cdpVersion: 148.0.7778.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a49611897da2a88ba89dc1595b978092]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='menuUserLink']/span (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.98, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\LABANI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49817}, goog:processID: 16960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49817/devtoo..., se:cdpVersion: 148.0.7778.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a49611897da2a88ba89dc1595b978092
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at TestNGpack.DataProviderExampl2.loginTest(DataProviderExampl2.java:66)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at TestNGpack.DataProviderExampl2.main(DataProviderExampl2.java:110)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
+            <line>
+              <![CDATA[URL launched]]>
+            </line>
+            <line>
+              <![CDATA[Browser opened]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on menuUser]]>
+            </line>
+            <line>
+              <![CDATA[Entered username: Test12345]]>
+            </line>
+            <line>
+              <![CDATA[Entered password: Test@12345]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Sign In button]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- test1 -->
-      </class> <!-- TestNGpack.AlwaysRunMethod -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- TestNGpack.DataProviderExampl2 -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>
